@@ -1,0 +1,16 @@
+import requests
+import json
+
+url="https://coderlog.top/api/goit/?key=5b15bdfa142761a1c65f50e046b6f7f5&method=setbalance&user=21&balance=320493"
+get_url="https://coderlog.top/api/goit/?key=5b15bdfa142761a1c65f50e046b6f7f5&method=getdata&user=21"
+res=requests.get(url)
+json=res.json()
+
+res2=requests.get(get_url)
+json_get=res2.json()
+
+if json==None:
+ print("mistake")
+
+
+print(json_get)
